@@ -28,7 +28,7 @@ const Hero = () => {
       className="px-6 md:px-10 lg:px-16 xl:px-40 transform transition-all relative h-screen w-full flex items-center justify-center text-white"
     >
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/40 "></div>
+      <div className="absolute inset-0 bg-black/50 "></div>
 
       <div className="relative z-10 text-center px-4">
         <h1 className="text-5xl md:text-6xl mb-6 leading-tight font-bold text-white">

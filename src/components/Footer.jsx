@@ -7,7 +7,7 @@ import { IoLocationOutline } from "react-icons/io5";
 
 const Footer = () => {
   return (
-    <div className="bg-gray-800 text-white py-10 px-6 md:px-10 lg:px-16 xl:px-40">
+    <div className="bg-gray-800 text-white py-15 px-6 md:px-10 lg:px-16 xl:px-40">
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div>
           <Link to="/" className="text-white text-2xl font-bold md:w-full">
@@ -20,53 +20,46 @@ const Footer = () => {
           </p>
           <div className="mb-6 pb4 flex gap-4">
             <Link>
-              <i>
-                <LuFacebook className="md:text-3xl" />
-              </i>
+              <LuFacebook className="md:text-3xl" />
             </Link>
             <Link>
-              <i>
-                <LuTwitter className="md:text-3xl" />
-              </i>
+              <LuTwitter className="md:text-3xl" />
             </Link>
             <Link>
-              <i>
-                <LuInstagram className="md:text-3xl" />
-              </i>
+              <LuInstagram className="md:text-3xl" />
             </Link>
-            {/* <i></i> */}
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div>
             <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
             <ul className="flex flex-col space-y-2">
-              <NavLink className="text-gray-300 hover:text-green-400 transition-colors">
+              <NavLink to="/" className="text-gray-300 hover:text-green-400 transition-colors">
                 Home
               </NavLink>
-              <NavLink className="text-gray-300 hover:text-green-400 transition-colors">
+              <NavLink to="/about" className="text-gray-300 hover:text-green-400 transition-colors">
                 About Us
               </NavLink>
-              <NavLink className="text-gray-300 hover:text-green-400 transition-colors">
+              <NavLink to="/products" className="text-gray-300 hover:text-green-400 transition-colors">
                 Products
               </NavLink>
-              <NavLink className="text-gray-300 hover:text-green-400 transition-colors">
+              <NavLink to="/gallery" className="text-gray-300 hover:text-green-400 transition-colors">
                 Gallery
               </NavLink>
-              <NavLink className="text-gray-300 hover:text-green-400 transition-colors">
+              <NavLink to="/contact" className="text-gray-300 hover:text-green-400 transition-colors">
                 Contact
               </NavLink>
             </ul>
           </div>
           <div>
-            <h2 className="text-lg font-semibold mb-4">Contact Info</h2>
+            <h2 className="text-lg font-semibold my-3">Contact Info</h2>
             <div className="space-y-2 text-gray-300">
               <div className="flex gap-4 items-center justify-start">
-                <FiPhone className="text-3xl" />
+                <FiPhone className="text-xl" />
                 <p>07036010547</p>
               </div>
               <div className="flex gap-4 items-center justify-start">
-                <HiOutlineMail className="text-3xl" />
+                <HiOutlineMail className="text-xl" />
                 <p>
                   oluwadunsindavid21
                   <br className="hidden md:block" />
@@ -74,7 +67,7 @@ const Footer = () => {
                 </p>
               </div>
               <div className="flex gap-4 items-center justify-start">
-                <IoLocationOutline className="text-3xl" />
+                <IoLocationOutline className="text-xl" />
                 <p>Ondo, Nigeria</p>
               </div>
             </div>
@@ -82,7 +75,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-        <p className="text-gray-300">© 2025 God of Mercy Poultry Farm. All rights reserved.</p>
+        <p className="text-gray-300">
+          © 2025 God of Mercy Poultry Farm. All rights reserved.
+        </p>
       </div>
     </div>
   );
