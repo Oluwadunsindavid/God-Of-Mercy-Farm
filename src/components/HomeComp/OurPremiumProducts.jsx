@@ -202,6 +202,7 @@ const OurPremiumProducts = () => {
       </div>
 
       {/* Modal */}
+      {/* FOR PEOPLE TO SELECT WHERE THEY WANT TO USE TO PLACE THEIR ORDERS */}
       {selectedProduct && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white rounded-lg p-8 shadow-lg max-w-sm w-full relative text-center">

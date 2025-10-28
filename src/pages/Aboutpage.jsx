@@ -2,6 +2,8 @@ import React from 'react'
 import Hero from '../components/AboutComp/Hero'
 import VisMis from '../components/AboutComp/VisMis'
 import OurStory from '../components/AboutComp/OurStory'
+import OurJourney from '../components/AboutComp/OurJourney'
+import OurTeam from '../components/AboutComp/OurTeam'
 
 const Aboutpage = () => {
   return (
@@ -9,6 +11,8 @@ const Aboutpage = () => {
       <Hero/>
       <VisMis/>
       <OurStory/>
+      <OurJourney/>
+      <OurTeam/>
     </div>
   )
 }
