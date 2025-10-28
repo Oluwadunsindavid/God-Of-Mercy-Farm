@@ -23,8 +23,6 @@ const items = [
   },
 ];
 
-// const [yellow, setYellow] = useState(false)
-
 const WCU = () => {
   return (
     <div className="bg-green-50 py-20 px-6 md:px-10 lg:px-16 xl:px-40">
@@ -38,9 +36,17 @@ const WCU = () => {
             key={index}
             className="bg-white rounded-xl shadow-lg p-10 text-center"
           >
-            <i className="mx-auto items-center flex justify-center bg-green-100 w-16 h-16 rounded-full text-green-600 mb-4 text-3xl">
+            {/* (FROM CHATGPT) TO MAKE THE 2ND DIV HAVE A YELLOW COLOR BACKGROUND AND YELLOW COLOR TEXT */}
+            <i
+              className={`mx-auto items-center flex justify-center bg-green-100 w-16 h-16 rounded-full text-green-600 mb-4 text-3xl transition-all duration-300 ${
+                item.yellow
+                  ? "bg-yellow-100 text-yellow-600"
+                  : "bg-green-100 text-green-600"
+              }`}
+            >
               {item.icon}
             </i>
+            {/* HOW CLOSE I WAS */}
             {/* <i
               className={`mx-auto items-center flex justify-center w-16 h-16 rounded-full text-green-600 mb-4 text-3xl ${true ?"bg-red-700" : "bg-amber-400"}`}
             >

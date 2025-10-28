@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import openImg from "../assets/menu_icon.png";
-import closeImg from "../assets/cross_icon.png";
+// import openImg from "../assets/menu_icon.png";
+// import closeImg from "../assets/cross_icon.png";
+import { IoMdClose } from "react-icons/io";
+import {BiMenuAltRight} from "react-icons/bi"
+
 
 const Navbar = () => {
   // Function to open and close menu
@@ -84,7 +87,8 @@ const Navbar = () => {
         onClick={() => setVisible((prev) => !prev)}
         className="md:hidden w-5 cursor-pointer"
       >
-        <img src={visible ? closeImg : openImg} alt="" />
+        {/* <img src={visible ? closeImg : openImg} alt="" /> */}
+        <i>{visible ? <IoMdClose className="text-2xl hover:text-green-600 transition-all duration-100"/> :<BiMenuAltRight className="text-2xl hover:text-green-600 transition-all duration-100" />} </i>
       </div>
       {/* --------------Mobile view----------------- */}
       {/* Mobile dropdown menu */}

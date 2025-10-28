@@ -4,6 +4,7 @@ import egg from "../../assets/egg.jpg";
 import broilers from "../../assets/broilers.jpg";
 import layers from "../../assets/layers.jpg";
 import newChicks from "../../assets/new_chicks.jpg";
+import { useNavigate } from "react-router-dom";
 
 // import image from "../../assets/abt_img.jpg";
 
@@ -34,7 +35,15 @@ const details = [
   },
 ];
 
+
+
 const OurPremiumProducts = () => {
+  // FOR THE BUTTON BELOW TO NAVIGATE TO THE PRODUCTS pagesconst ViewProductsButton = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/products"); // 👈 your target page route
+  };
   return (
     <div className="py-10 px-6 md:px-10 lg:px-16 xl:px-40">
       <Title
@@ -79,12 +88,12 @@ const OurPremiumProducts = () => {
         ))}
       </div>
       <button
+        onClick={handleClick}
         type="button"
         className="font-bold rounded-lg transition-all duration-300 cursor-pointer whitespace-nowrap bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl px-8 py-4 mt-12 flex justify-center items-center mx-auto text-xl mb-10"
       >
         View All Products
       </button>
-      
     </div>
   );
 };

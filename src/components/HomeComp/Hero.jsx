@@ -1,7 +1,20 @@
 import React from "react";
 import bg_img from "../../assets/homepage_img.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  // FOR THE BUTTON BELOW TO NAVIGATE TO THE PRODUCTS pagesconst ViewProductsButton = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/products"); // 👈 your target page route
+  };
+
+  // ✅ This function opens the user's default email app
+  const handleOrderNow = () => {
+    window.location.href =
+      "mailto:oluwadunsindavid21@gmail.com?subject=Order%20Request&body=Hello,%20I%20would%20like%20to%20place%20an%20order.";
+  };
   return (
     <div
       style={{
@@ -12,7 +25,7 @@ const Hero = () => {
         height: "100vh",
         width: "100%",
       }}
-      className="px-6 md:px-10 lg:px-16 xl:px-40 transform transition-all relative h-[100vh] w-full flex items-center justify-center text-white"
+      className="px-6 md:px-10 lg:px-16 xl:px-40 transform transition-all relative h-screen w-full flex items-center justify-center text-white"
     >
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/40 "></div>
@@ -29,10 +42,18 @@ const Hero = () => {
           your doorstep. Experience the difference of farm-fresh quality.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="font-semibold rounded-lg transition-all duration-300 cursor-pointer whitespace-nowrap bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl px-8 py-4 text-lg ">
+          {/* ✅ Order Now triggers email */}
+          <button
+            onClick={handleOrderNow}
+            className="font-semibold rounded-lg transition-all duration-300 cursor-pointer whitespace-nowrap bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl px-8 py-4 text-lg "
+          >
             Order Now
           </button>
-          <button className="font-semibold rounded-lg transition-all duration-300 cursor-pointer whitespace-nowrap bg-yellow-500 hover:bg-yellow-600 text-black shadow-lg hover:shadow-xl px-8 py-4 text-lg ">
+          {/* ✅ View Products navigates to products page */}
+          <button
+            onClick={handleClick}
+            className="font-semibold rounded-lg transition-all duration-300 cursor-pointer whitespace-nowrap bg-yellow-500 hover:bg-yellow-600 text-black shadow-lg hover:shadow-xl px-8 py-4 text-lg "
+          >
             View Products
           </button>
         </div>
