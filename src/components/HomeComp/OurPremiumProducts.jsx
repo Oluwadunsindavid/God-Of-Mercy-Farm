@@ -35,14 +35,22 @@ const details = [
   },
 ];
 
-
-
 const OurPremiumProducts = () => {
   // FOR THE BUTTON BELOW TO NAVIGATE TO THE PRODUCTS pagesconst ViewProductsButton = () => {
   const navigate = useNavigate();
 
+  // ✅ Button to go to the products page
   const handleClick = () => {
     navigate("/products"); // 👈 your target page route
+  };
+
+  // ✅ Dynamic email function
+  const handleOrder = (product, price) => {
+    const subject = encodeURIComponent(`Order Request: ${product}`);
+    const body = encodeURIComponent(
+      `Hello,\n\nI would like to place an order for:\n\nProduct: ${product}\nPrice: ${price}\n\nPlease provide more details about availability and delivery options.\n\nThank you.`
+    );
+    window.location.href = `mailto:oluwadunsindavid21@gmail.com?subject=${subject}&body=${body}`;
   };
   return (
     <div className="py-10 px-6 md:px-10 lg:px-16 xl:px-40">
@@ -76,6 +84,7 @@ const OurPremiumProducts = () => {
                     {item.price}
                   </p>
                   <button
+                    onClick={() => handleOrder(item.product, item.price)}
                     type="button"
                     className="font-semibold rounded-lg transition-all duration-300 cursor-pointer whitespace-nowrap bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl px-4 py-2 text-sm "
                   >
