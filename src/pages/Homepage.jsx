@@ -9,7 +9,7 @@ import Order from '../components/HomeComp/Order';
 
 const Homepage = () => {
   return (
-    <div className="">
+    <div className="pt-16">
       <Hero />
       <AbtGOM/>
       <Title/>
