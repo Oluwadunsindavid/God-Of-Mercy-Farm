@@ -61,7 +61,7 @@ const Navbar = () => {
         >
           Products
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="/gallery"
           className={({ isActive }) =>
             `text-sm px-3 py-2 rounded-md font-medium hover:text-green-600 hover:bg-green-50 ${
@@ -70,7 +70,7 @@ const Navbar = () => {
           }
         >
           Gallery
-        </NavLink>
+        </NavLink> */}
         <NavLink
           to="/contact"
           className={({ isActive }) =>
@@ -132,7 +132,7 @@ const Navbar = () => {
           >
             Products
           </NavLink>
-          <NavLink
+          {/* <NavLink
             onClick={() => setVisible(false)}
             to="/gallery"
             className={({ isActive }) =>
@@ -142,7 +142,7 @@ const Navbar = () => {
             }
           >
             Gallery
-          </NavLink>
+          </NavLink> */}
           <NavLink
             onClick={() => setVisible(false)}
             to="/contact"

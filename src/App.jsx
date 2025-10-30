@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<AboutPage />} />{" "}
         <Route path="/products" element={<Productspage />} />{" "}
-        <Route path="/gallery" element={<Gallerypage />} />
+        {/* <Route path="/gallery" element={<Gallerypage />} /> */}
         <Route path="/contact" element={<Contactpage />} />
       </Routes>
       <BackToTopButton/>
