@@ -6,7 +6,7 @@ const Hero = () => {
   // FOR THE BUTTON BELOW TO NAVIGATE TO THE PRODUCTS pagesconst ViewProductsButton = () => {
   const navigate = useNavigate();
 
-  // FOR LOADING THE IMAGES FASTER
+  // CHATGPT LAZY LOADING FOR BG IMAGES FOR LOADING THE IMAGES FASTER
   const [bgLoaded, setBgLoaded] = useState(false);
 
   useEffect(() => {
@@ -27,6 +27,7 @@ const Hero = () => {
   return (
     <div
       style={{
+        // CHATGPT LAZY LOADING FOR BG IMAGES FOR LOADING THE IMAGES FASTER
         backgroundImage: bgLoaded
           ? `url(${bg_img})`
           : "linear-gradient(to bottom, #14532d, #1e3a8a)",

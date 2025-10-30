@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import bg_img from "../../assets/galleryImg.webp";
 
 const Hero = () => {
+  // CHATGPT LAZY LOADING FOR BG IMAGES FOR LOADING THE IMAGES FASTER
+  const [bgLoaded, setBgLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = bg_img;
+    img.onload = () => setBgLoaded(true);
+  }, []);
+
   return (
     <div
       style={{
-        backgroundImage: `url(${bg_img})`,
+        // CHATGPT LAZY LOADING FOR BG IMAGES FOR LOADING THE IMAGES FASTER
+        backgroundImage: bgLoaded
+          ? `url(${bg_img})`
+          : "linear-gradient(to bottom, #14532d, #1e3a8a)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
