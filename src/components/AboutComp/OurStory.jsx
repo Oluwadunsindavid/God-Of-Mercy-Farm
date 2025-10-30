@@ -38,6 +38,7 @@ const OurStory = () => {
             src={image}
             className="mb-6 rounded-lg shadow-xl object-cover object-top w-full h-96"
             alt=""
+            loading="lazy"
           />
         </div>
       </div>

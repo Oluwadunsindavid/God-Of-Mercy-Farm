@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import bg_img from "../../assets/homepage_img.webp";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   // FOR THE BUTTON BELOW TO NAVIGATE TO THE PRODUCTS pagesconst ViewProductsButton = () => {
   const navigate = useNavigate();
+
+  // FOR LOADING THE IMAGES FASTER
+  const [bgLoaded, setBgLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = bg_img;
+    img.onload = () => setBgLoaded(true);
+  }, []);
 
   const handleClick = () => {
     navigate("/products"); // 👈 your target page route
@@ -18,7 +27,9 @@ const Hero = () => {
   return (
     <div
       style={{
-        backgroundImage: `url(${bg_img})`,
+        backgroundImage: bgLoaded
+          ? `url(${bg_img})`
+          : "linear-gradient(to bottom, #14532d, #1e3a8a)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

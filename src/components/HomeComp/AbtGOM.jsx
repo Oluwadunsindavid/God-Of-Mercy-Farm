@@ -20,12 +20,20 @@ const AbtGOM = () => {
           our operation is designed to deliver the freshest, healthiest products
           to your table.
         </p>
-        <Link to="/about" className="font-semibold rounded-lg transition-all duration-300 cursor-pointer whitespace-nowrap border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white px-6 py-3 text-base">
+        <Link
+          to="/about"
+          className="font-semibold rounded-lg transition-all duration-300 cursor-pointer whitespace-nowrap border-2 border-green-500 text-green-500 hover:bg-green-500 hover:text-white px-6 py-3 text-base"
+        >
           Learn More About Us
         </Link>
       </div>
       <div className="relative">
-        <img className="rounded-lg shadow-xl object-cover object-top w-full h-96" src={abtImg} alt="" />
+        <img
+          className="rounded-lg shadow-xl object-cover object-top w-full h-96"
+          src={abtImg}
+          alt=""
+          loading="lazy"
+        />
       </div>
     </div>
   );

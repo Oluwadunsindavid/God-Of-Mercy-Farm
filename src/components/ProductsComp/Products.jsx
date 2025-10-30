@@ -194,6 +194,7 @@ const Products = () => {
                   src={item.img}
                   className="w-full h-48 object-cover object-top group-hover:scale-105 transition-transform duration-300"
                   alt=""
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-transform duration-300"></div>
               </div>
