@@ -142,7 +142,7 @@ const Navbar = () => {
             }
           >
             Gallery
-          </NavLink> */}
+          </NavLink> */} 
           <NavLink
             onClick={() => setVisible(false)}
             to="/contact"
