@@ -1,8 +1,7 @@
 import React from "react";
-import bg_img from "../../assets/AbtHero.jpg";
+import bg_img from "../../assets/GalleryImg.jpg";
 
 const Hero = () => {
-
   return (
     <div
       style={{
@@ -19,10 +18,10 @@ const Hero = () => {
 
       <div className="relative z-10 text-center">
         <h1 className="text-5xl md:text-6xl mb-6 leading-tight font-bold text-white">
-          About Our Farm
+          Gallery
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
-          Discover the story behind Nigeria's most trusted poultry farm
+          A glimpse into our farm and fresh poultry products
         </p>
       </div>
     </div>

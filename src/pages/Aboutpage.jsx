@@ -4,6 +4,7 @@ import VisMis from '../components/AboutComp/VisMis'
 import OurStory from '../components/AboutComp/OurStory'
 import OurJourney from '../components/AboutComp/OurJourney'
 import OurTeam from '../components/AboutComp/OurTeam'
+import OurCoreValues from '../components/AboutComp/OurCoreValues'
 
 const Aboutpage = () => {
   return (
@@ -13,6 +14,7 @@ const Aboutpage = () => {
       <OurStory/>
       <OurJourney/>
       <OurTeam/>
+      <OurCoreValues/>
     </div>
   )
 }
