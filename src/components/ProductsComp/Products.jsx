@@ -92,7 +92,7 @@ const Products = () => {
     setSelectedProduct(null);
   };
   return (
-    <div className="py-10 bg-gray-100">
+    <div className=" bg-gray-100">
       {/* Filter Buttons */}
       <section className="px-6 md:px-10 lg:px-16 xl:px-4 flex items-center justify-center flex-wrap py-12 bg-white border-b border-gray-200 gap-2 sm:gap-4">
         {[
