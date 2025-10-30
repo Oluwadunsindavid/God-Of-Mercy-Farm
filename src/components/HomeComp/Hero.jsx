@@ -1,5 +1,5 @@
 import React from "react";
-import bg_img from "../../assets/homepage_img.jpg";
+import bg_img from "../../assets/homepage_img.webp";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {

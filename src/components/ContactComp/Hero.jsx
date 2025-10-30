@@ -1,5 +1,5 @@
 import React from "react";
-import bg_img from "../../assets/contactUsImg.jpg";
+import bg_img from "../../assets/contactUsImg.webp";
 
 const Hero = () => {
   return (

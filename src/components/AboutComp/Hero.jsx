@@ -1,5 +1,5 @@
 import React from "react";
-import bg_img from "../../assets/AbtHero.jpg";
+import bg_img from "../../assets/AbtHero.webp";
 
 const Hero = () => {
 
