@@ -9,6 +9,7 @@ import Productspage from "./pages/Productspage.jsx";
 import Footer from "./components/Footer.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
 import BackToTopButton from "./components/BackToTopBtn.jsx";
+import WhatsAppFloat from "./components/WhatsAppFloat.jsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contact" element={<Contactpage />} />
       </Routes>
       <BackToTopButton/>
+      <WhatsAppFloat/>
       <Footer />
     </div>
   );
