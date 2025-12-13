@@ -89,7 +89,7 @@ function App() {
     const timer = setTimeout(() => {
       setFadeOut(true);
       setTimeout(() => setLoading(false), 400);
-    }, 1500); // shorter & professional
+    }, 2500); // shorter & professional
 
     return () => clearTimeout(timer);
   }, []);
